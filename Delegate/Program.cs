@@ -23,6 +23,7 @@ try
     }
 }
 
+
 catch(Exception ex)                   // When an exception occurs during the invocation of one of the methods a delegate refers to, the delegate does not continue invoking methods in its invocation list.
 {
     Console.WriteLine(ex.Message);    // in a multicast delegate, if firt method throws exception, then other method will not get executed.
