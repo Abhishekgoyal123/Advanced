@@ -6,22 +6,30 @@ using System.Threading.Tasks;
 
 namespace Delegate_Extension
 {
-   public delegate void delegate1(Class1 c1);
+   public delegate bool delegate1(Class1 c1);
+
+    public delegate int delegate2(int a);
     public class Class1
     {
-        public int id;
-        public void Add(Class1 c1)
+        public int Salary=0;
+        public void Add(Class1 c, delegate1 d1)
         {
 
-            Console.WriteLine("add");
-            //return c1.id;
+            if (d1(c))
+            {
+                Console.WriteLine("add from class method");
+            }
+            
+           // return id;
            
         }
 
-        private void Sub(Class1 c1)
+        public void Sub(delegate2 d2)
         {
-            Console.WriteLine("sub");
-            //return c1.id;
+            int b = 0;
+            if(d2(b) ==100)
+                Console.WriteLine("sub");
+
 
         }
 

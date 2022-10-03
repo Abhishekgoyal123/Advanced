@@ -4,21 +4,27 @@ Console.WriteLine("Hello, World!");
 
 
 Class1 c1 = new Class1();
-delegate1 d1 = new delegate1(c1.Add);
 
-Class2 c2 = new Class2();
+delegate1 d1 = new delegate1(add123);
 
-c2.execute(d1);
-
+c1.Add(c1,d1);
 
 
-
-
-//random(c1);
-
-static void random (Class1 c2)
+static bool add123(Class1 c)
 {
-    c2.id = 10;
-    Console.WriteLine($"id = {c2.id}");
+     bool b = true;
+    return b;
+   // Console.WriteLine("add from main");
 
+}
+
+
+delegate2 d2 = new delegate2(abcd);
+
+c1.Sub(d2);
+
+static int abcd(int a)
+{
+    int a1 = 100;
+    return a1;
 }
