@@ -18,7 +18,7 @@ try
     foreach (delegate1 item in d1.GetInvocationList())  //======================================
     {
         //Console.WriteLine(item);                      // In multicast delegate, if all my methods are returning something, then to get ( return ) values from each method, we invoke the method using Invocation list and not invoke using delegate.
-       int abc = item.Invoke(2, 3);
+        int abc = item.Invoke(2, 3);
         Console.WriteLine(abc);//=====================================================================================
     }
 }
