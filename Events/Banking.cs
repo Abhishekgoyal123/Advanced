@@ -20,6 +20,8 @@ namespace Events
             NetBalance = netBalance;
         }
 
+        
+
         public void Deposit(decimal amount)
         {
             NetBalance = NetBalance + amount;
@@ -35,7 +37,7 @@ namespace Events
         {
             NetBalance = NetBalance - amount;
 
-            if (NetBalance <5000)
+            if (NetBalance < 5000)
             {
                 UnderBalance_Event();
             }
@@ -46,5 +48,7 @@ namespace Events
         {
             return NetBalance;
         }
+
+        
     }
 }
