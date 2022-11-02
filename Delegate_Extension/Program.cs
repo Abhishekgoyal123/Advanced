@@ -21,10 +21,10 @@ static bool add123(Class1 c)
 
 delegate2 d2 = new delegate2(abcd);
 
-c1.Sub(d2);
+c1.Sub(abcd);
 
 static int abcd(int a)
 {
     int a1 = 100;
-    return a1;
+    return 10;
 }
